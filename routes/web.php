@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::view('registerform', 'auth.register')->name('register');
-Route::view('loginform', 'auth.login')->name('login');
+Route::view('/', 'auth.login')->name('login');
 Route::post('register', [App\Http\Controllers\Auth\AuthenticationController::class, 'register'])->name('register.form');
 Route::post('login', [App\Http\Controllers\Auth\AuthenticationController::class, 'login'])->name('login.form');
 
