@@ -334,7 +334,7 @@
 <body>
     <div class="dashboard">
        <div class="header">
-    <img src="/build/assets/logo2.png" alt="Sept11Barber Shop Logo" class="header-logo">
+    <img src="{{ asset('logo2.png') }}" alt="Sept11Barber Shop Logo" class="header-logo">
     <h1>Booking Dashboard</h1>
     <div class="stats">
         <div class="stat-card">

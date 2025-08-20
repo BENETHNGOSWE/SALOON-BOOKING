@@ -14,7 +14,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-image: url('{{ asset("build/assets/booking-saloon.jpg") }}');
+            background-image: url('{{ asset("booking-saloon.jpg") }}');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -323,7 +323,7 @@
 <body>
     <div class="form-container" id="formContainer">
         <div class="logo">
-            <img src="{{ asset('build/assets/logo.png') }}" alt="Salon Logo">
+            <img src="{{ asset('logo.png') }}" alt="Salon Logo">
         </div>
         <h2>Make Booking</h2>
         
