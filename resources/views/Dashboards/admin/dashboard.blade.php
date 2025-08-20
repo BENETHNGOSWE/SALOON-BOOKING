@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Dashboard</title>
+    <title>Sept11Barber Shop</title>
     <style>
         * {
             margin: 0;
@@ -317,31 +317,44 @@
         .notification.error {
             background: #ef4444;
         }
+
+        .header-logo {
+            max-width: 350px; /* Adjust size as needed */
+            height: auto;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+        @media (max-width: 768px) {
+        .header-logo {
+            max-width: 300px; /* Smaller logo on mobile */
+        }
+    }
     </style>
 </head>
 <body>
     <div class="dashboard">
-        <div class="header">
-            <h1>Booking Dashboard</h1>
-            <div class="stats">
-                <div class="stat-card">
-                    <span class="stat-number" id="totalBookings">0</span>
-                    <span>Total Bookings</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number" id="todayBookings">0</span>
-                    <span>Today's Bookings</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number" id="pendingBookings">0</span>
-                    <span>Pending</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number" id="confirmedBookings">0</span>
-                    <span>Confirmed</span>
-                </div>
-            </div>
+       <div class="header">
+    <img src="/build/assets/logo2.png" alt="Sept11Barber Shop Logo" class="header-logo">
+    <h1>Booking Dashboard</h1>
+    <div class="stats">
+        <div class="stat-card">
+            <span class="stat-number" id="totalBookings">0</span>
+            <span>Total Bookings</span>
         </div>
+        <div class="stat-card">
+            <span class="stat-number" id="todayBookings">0</span>
+            <span>Today's Bookings</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="pendingBookings">0</span>
+            <span>Pending</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number" id="confirmedBookings">0</span>
+            <span>Confirmed</span>
+        </div>
+    </div>
+</div>
 
         <div class="controls">
             <div class="search-filter">
