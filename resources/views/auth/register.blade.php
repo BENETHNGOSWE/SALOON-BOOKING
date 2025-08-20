@@ -273,7 +273,6 @@
     </div>
 
     <script>
-        // Simple password strength indicator
         const passwordInput = document.getElementById('password');
         const strengthBar = document.querySelector('.password-strength');
         
