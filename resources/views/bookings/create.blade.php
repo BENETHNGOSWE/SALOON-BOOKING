@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>Make Booking</title>
     <style>
         * {
@@ -318,6 +319,31 @@
         .success-animation {
             animation: successPulse 0.6s ease-out;
         }
+
+        .chair-box {
+            width: 80px; 
+            height: 80px; 
+            border-radius: 15px; 
+            border: 2px solid #4f46e5; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input[type="radio"]:checked + .chair-box {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            border-color: #7c3aed;
+            transform: scale(1.05);
+        }
+        .h1label{
+            text-align: center;
+            margin-bottom:1em;
+        }
+
     </style>
 </head>
 <body>
@@ -370,6 +396,23 @@
                     <option value="nyote">Kunyoa + Scrub</option>
                 </select>
             </div>
+
+           <div class="form-group">
+                <label class="h1label">Select Your Seat</label>
+                <div style="display: flex; justify-content: center; gap: 50px;">
+                    @foreach($chair_booking as $chair)
+                        <label style="text-align: center; cursor: pointer;">
+                            <input type="radio" name="chair_id" value="{{ $chair->id }}" required style="display: none;">
+                            <div class="chair-box">
+                                <i class="fa-solid fa-chair" style="font-size:30px;"></i>
+                                <span style="font-size: 12px; margin-top: 5px;">{{ $chair->chair_number }}</span>
+                            </div>
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+
+
 
             <button type="submit" id="submitBtn">
                 <span id="btnText">Book Your Appointment</span>

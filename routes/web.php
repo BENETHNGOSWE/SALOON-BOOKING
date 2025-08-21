@@ -7,7 +7,7 @@ Route::view('/login-here', 'auth.login')->name('login');
 Route::post('register', [App\Http\Controllers\Auth\AuthenticationController::class, 'register'])->name('register.form');
 Route::post('login', [App\Http\Controllers\Auth\AuthenticationController::class, 'login'])->name('login.form');
 
-Route::view('/', 'bookings.create')->name('booking.create');
+Route::get('/', [App\Http\Controllers\Booking\BookingController::class, 'create'])->name('booking.create');
 Route::post('save-booking', [App\Http\Controllers\Booking\BookingController::class, 'store'])->name('booking.store');
 
 Route::middleware(['auth', 'role:admin'])->group( function() {

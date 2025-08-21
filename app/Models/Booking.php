@@ -15,5 +15,10 @@ class Booking extends Model
         'booking_time',
         'booking_number',
         'booking_status',
+        'chair_id',
     ];
+
+    public function chair() {
+        return $this->belongsTo(Chair::class, 'chair_id');
+    }
 }
