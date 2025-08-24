@@ -70,7 +70,7 @@ class BookingController extends Controller
     private function sendWhatsAppNotification(Booking $booking)
     {
         $phoneNumber = '+255710459064'; 
-        $apiKey = XXXXXXXX;
+        $apiKey = 2408280;
         $message = urlencode(
             "New Booking Created!\n" .
             "Booking Number: {$booking->booking_number}\n" .
