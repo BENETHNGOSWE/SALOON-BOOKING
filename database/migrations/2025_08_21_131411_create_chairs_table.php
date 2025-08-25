@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('chair_number');
             $table->string('chair_owner');
+            $table->string('chair_owner_number');
             $table->timestamps();
         });
     }

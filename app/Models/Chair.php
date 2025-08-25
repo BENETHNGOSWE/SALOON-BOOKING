@@ -8,7 +8,8 @@ class Chair extends Model
 {
     protected $fillable = [
         'chair_number',
-        'chair_owner'
+        'chair_owner',
+        'chair_owner_number'
     ];
 
     public function bookings() {

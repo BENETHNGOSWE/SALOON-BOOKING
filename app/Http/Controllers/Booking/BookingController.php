@@ -38,7 +38,7 @@ class BookingController extends Controller
         return $request->validate([
             'booking_name' => 'required',
             'booking_phonenumber' => 'required',
-            'booking_service' => 'required|in:kunyoa,scrub,nyote',
+            'booking_service' => 'required|in:kunyoa,scrub,vyote',
             'booking_date' => 'required',
             'booking_time' => 'required',
             'booking_number' => 'nullable',

@@ -321,7 +321,7 @@
         }
 
         .chair-box {
-            width: 80px; 
+            width: 110%; 
             height: 80px; 
             border-radius: 15px; 
             border: 2px solid #4f46e5; 
@@ -393,19 +393,21 @@
                     <option value="">-- Choose a service --</option>
                     <option value="kunyoa">Kunyoa</option>
                     <option value="scrub">Scrub</option>
-                    <option value="nyote">Kunyoa + Scrub</option>
+                    <option value="vyote">Kunyoa + Scrub</option>
                 </select>
             </div>
 
            <div class="form-group">
                 <label class="h1label">Select Your Seat</label>
-                <div style="display: flex; justify-content: center; gap: 50px;">
+                <div style="display: flex; justify-content: center; gap: 40px;">
                     @foreach($chair_booking as $chair)
                         <label style="text-align: center; cursor: pointer;">
                             <input type="radio" name="chair_id" value="{{ $chair->id }}" required style="display: none;">
                             <div class="chair-box">
-                                <i class="fa-solid fa-chair" style="font-size:30px;"></i>
-                                <span style="font-size: 12px; margin-top: 5px;">{{ $chair->chair_number }}</span>
+                                <i class="fa-solid fa-barber" style="font-size:20px;"></i>
+                                <span style="font-size: 9px; margin-top: 5px; font-weight:bold;">{{ $chair->chair_number }}</span>
+                                <span style="font-size: 9px; margin-top: 2px; font-weight:bold;">{{ $chair->chair_owner_number }}</span>
+                                <span style="font-size: 9px; margin-top: 2px; font-weight:bold;">**{{ $chair->chair_owner }}**</span>
                             </div>
                         </label>
                     @endforeach
